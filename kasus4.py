@@ -19,10 +19,10 @@ for i in range(0,jumlah_matakuliah):
 		nilai_MK.append(0*sks)
 ipk = sum(nilai_MK) / sum(jumlah_sks)
 if ipk >= 3.5 and ipk <= 4:
-		print("ipk = ",ipk,"\nPREDIKAT DENGAN PUJIAN")
+        print("ipk = ",ipk,"\nPREDIKAT DENGAN PUJIAN")
 elif ipk >= 3 and ipk < 3.5:
 	print("ipk = ",ipk,"\nPREDIKAT SANGAT MEMUASKAN")
 elif ipk >= 2.5 and ipk < 3:
-		print("ipk = ",ipk,"\nPREDIKAT MEMUASKAN")
+	print("ipk = ",ipk,"\nPREDIKAT MEMUASKAN")
 elif ipk < 2.5:
-		print("ipk = ",ipk,"\nPREDIKAT LULUS")
+	print("ipk = ",ipk,"\nPREDIKAT LULUS")
