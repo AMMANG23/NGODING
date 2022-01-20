@@ -1,3 +1,4 @@
+
 <?php
 
 //Memanggil fungsi inputan yang di file index.php
@@ -13,6 +14,11 @@ $pass = "1234";  //password mysql
 $db = "data";    //nama database
 $konek = mysqli_connect($host, $user, $pass, $db);
 
+/*
+Jadi disini saya sudah membuat databasenya dengan nama 'data' 
+untuk nama tabelnya itu saya buat dengan nama info yang dimana
+didalam tabel itu terdiri dari kolom untuk NIM, NAMA, DAN JURUSAN
+*/
 if(isset($tombol_tambah)){
   $sql = "INSERT INTO info VALUES('$nim', '$nama', '$jurusan')";
   mysqli_query($konek, $sql);
@@ -21,5 +27,6 @@ if(isset($tombol_tambah)){
 jadi ketika kita isi inputan yang ada di index.php dan kita klik tombol
 tambah maka data mahasiswa akan di kirim ke database
 */
+
 }
 ?>
