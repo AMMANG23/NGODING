@@ -14,20 +14,7 @@
   <input name="array" type="number" class="btn btn-dark" placeholder="input panjang array">
   <button name="panjangarray"type="submit" class="btn btn-primary">Selanjutnya</button>
 </div>
-  </div>
-</body>
-</html>
-
 <?php
-echo("<!DOCTYPE html>");
-echo("<html lang='id'>");
-echo("<meta charset='UTF-8'>");
-echo("<meta name='viewport' content='width=device-width, initial-scale=1.0'>");
-echo("<title>Belajar Bootstrap</title>");
-echo(" <link rel='stylesheet' href='css/bootstrap.css'>");
-echo("</head>");
-echo("<body>");
-echo("<div class='container'>");
 echo("<form method='post'/>");
 if (isset($_POST['panjangarray'])) {
   echo("Silahkan Masukkan Elemen Array !");
@@ -45,21 +32,7 @@ if (isset($_POST['panjangarray'])) {
   </label>
 </div>");
   echo("<button name='next' type='submit' class='btn btn-primary'>Lanjut</button>");
-  
 }
-echo("</div>");
-echo("</body>");
-echo("</html>");
-
-echo("<!DOCTYPE html>");
-echo("<html lang='id'>");
-echo("<meta charset='UTF-8'>");
-echo("<meta name='viewport' content='width=device-width, initial-scale=1.0'>");
-echo("<title>Belajar Bootstrap</title>");
-echo(" <link rel='stylesheet' href='css/bootstrap.css'>");
-echo("</head>");
-echo("<body>");
-echo("<div class='container'>");
 $arr = [];
 if(isset($_POST['next'])){
     for($i=0; $i<$_POST['cek']; $i++){
@@ -69,6 +42,7 @@ if(isset($_POST['next'])){
      print("</pre>");
     }
   }
-echo("</div>");
-echo("</body>");
-echo("</html>");
+?>
+  </div>
+</body>
+</html>
