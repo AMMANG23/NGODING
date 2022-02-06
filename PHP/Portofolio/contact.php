@@ -1,3 +1,12 @@
+<?php
+$connect = mysqli_connect('127.0.0.1', 'root', '', 'portofolio');
+if(isset($_POST['send'])){
+  $name = $_POST['full_name'];
+  $message = $_POST['message'];
+  $insert = mysqli_query($connect, "INSERT INTO message VALUES('$name', '$message')");
+  header('location:index.php');
+  } ?>
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -18,34 +27,47 @@
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav ms-auto">
         <a class="nav-link" href="index.php"><i class="bi bi-house"></i> Home</a>
-        <a class="nav-link active" aria-current="page" href="about.php"><i class="bi bi-file-person"></i> About</a>
+        <a class="nav-link" href="about.php"><i class="bi bi-file-person"></i> About</a>
         <a class="nav-link" href="project.php"><i class="bi bi-award"></i> Project</a>
-        <a class="nav-link" href="contact.php"><i class="bi bi-person-rolodex"></i> Contact</a>
+        <a class="nav-link active" aria-current="page" href="contact.php"><i class="bi bi-person-rolodex"></i> Contact</a>
       </div>
     </div>
   </div>
 </nav>
 <div class="p-3 mb-1"><center>
   <img src="arman.jpg" class="rounded-circle img-thumbnail mb-3" width="250">
-  <p class="text-danger">ABOUT | ARMAN UMAR</p>
+  <p class="text-danger">CONTACT ME</p>
   </center>
 </div>
 <center>
-<div class="container p-4 mb-5">
-<div align="center" class="card" style="width: 23rem;">
-  <div class="card-body  bg-alert alert-secondary ">
-    <p class="card-text">Saya lahir di Desa Sabang-subik, Kec.Balanipa, Kab.Polewali Mandar, Prov.Sulawesi Barat pada tahun 2002. Mulai menekuni dunia programing pada saat masuk kuliah pada tahun 2021
-        Dan ambil jurusan Teknik Informatika Di Universitas Sulawesi Barat.
-    </p>
-  </div>
-</div>
-</div>
-</center>
-<center>
-<div class="container p-4 mb-5">
-<div align="center" class="card" style="width: 23rem;">
+<div class="container p-4 mb-1">
+<div align="center" class="card" style="width: 27rem;">
 </div>
 </div></center>
+<center>
+<div class="container p-4 mb-5">
+<div class="card bg-alert alert-danger p-4" style="width: 27rem;">
+<form action="" method="post" align="left"/>
+  <div class="mb-3">
+    <label class="form-label">Full name</label>
+    <input name="full_name" type="text" class="form-control">
+  </div>
+  <div class="mb-3">
+  <label for="exampleFormControlTextarea1" class="form-label">Message</label>
+  <textarea name="message" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+</div>
+  <button name="send" type="submit" class="btn btn-primary"><i class="bi bi-send-fill"></i> Send</button>
+</form>
+</div>
+</div>
+
+<div class="">
+  <p class="text-danger">Jika pesan terkirim, Maka akan langsung dialihkan ke home.</p>
+</div>
+<div class="container p-4 mb-5">
+<div align="center" class="card" style="width: 27rem;">
+</div>
+</div>
 <footer><center><br>
   <p class="text-primary">Created by ARMAN UMAR</p></center>
 </footer>
